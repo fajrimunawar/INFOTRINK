@@ -530,7 +530,11 @@
                 <button class="modal-close" id="btnCloseEmail">&times;</button>
             </div>
             <form class="email-form" id="emailForm">
-                <input type="hidden" name="access_key" value="MASUKKAN_ACCESS_KEY_DISINI">
+
+                <!-- ⬇️⬇️⬇️ GANTI INI ⬇️⬇️⬇️ -->
+                <input type="hidden" name="access_key" value="PASTE_ACCESS_KEY_KAMU_DISINI">
+                <!-- ⬆️⬆️⬆️ GANTI INI ⬆️⬆️⬆️ -->
+
                 <input type="hidden" name="subject" value="Pesan Baru dari Website ID Card">
                 <input type="hidden" name="from_name" value="Website ID Card">
 
@@ -711,15 +715,12 @@
         function onDragMove(clientX) { if (!isDragging) return; angle = dragStartAngle + (clientX - dragStartX) * 0.4; applyTransform(); }
         function onDragEnd() { if (!isDragging) return; isDragging = false; if (mode === '360') card3d.style.cursor = 'grab'; }
 
-        /* ===== INI YANG DIPERBAIKI ===== */
         document.addEventListener('mousedown', function(e) {
             if ((mode === '360' || mode === 'auto') && !isModalOpen && !isEmailOpen && !isSnapping && card3d.contains(e.target)) {
                 e.preventDefault();
             }
             onDragStart(e.clientX, e.target);
         });
-        /* ===== SAMPAI SINI ===== */
-
         document.addEventListener('mousemove', function(e) { onDragMove(e.clientX); });
         document.addEventListener('mouseup', function() { onDragEnd(); });
         document.addEventListener('touchstart', function(e) { if (e.touches.length !== 1) return; onDragStart(e.touches[0].clientX, e.target); }, { passive: true });
