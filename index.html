@@ -495,7 +495,7 @@
         .modal-panel {
             background: #ffffff;
             width: 90%;
-            max-width: 680px;
+            max-width: 720px;
             border-radius: 20px;
             border: 3px solid #1a2a6c;
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
@@ -515,6 +515,7 @@
             text-align: center;
             position: relative;
             border-bottom: 4px solid #f1c40f;
+            flex-shrink: 0;
         }
 
         .modal-header h2 {
@@ -544,9 +545,27 @@
         }
 
         .modal-content {
-            padding: 28px 30px;
-            max-height: 72vh;
+            padding: 32px 36px 36px;
+            max-height: 80vh;
             overflow-y: auto;
+        }
+
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #1a2a6c;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #2a3a8c;
         }
 
         .section-title {
@@ -555,16 +574,16 @@
             color: #7f8c8d;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
             border-left: 3px solid #1a2a6c;
-            padding-left: 8px;
+            padding-left: 10px;
         }
 
         .icon-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-bottom: 28px;
+            gap: 14px;
+            margin-bottom: 36px;
         }
 
         .icon-grid:last-child {
@@ -625,6 +644,13 @@
 
         .platform-grid .social-icon img {
             margin-bottom: 6px;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #cbd5e1 20%, #1a2a6c 50%, #cbd5e1 80%, transparent 100%);
+            margin: 0 0 28px 0;
+            opacity: 0.5;
         }
 
         .modal-email {
@@ -1003,9 +1029,19 @@
                 display: none;
             }
 
+            .modal-panel {
+                max-width: 95%;
+            }
+
+            .modal-content {
+                padding: 24px 20px 28px;
+                max-height: 75vh;
+            }
+
             .icon-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 12px;
+                margin-bottom: 28px;
             }
 
             .platform-grid .social-icon {
@@ -1013,12 +1049,12 @@
                 min-height: 82px;
             }
 
-            .email-2col {
-                grid-template-columns: 1fr;
+            .section-divider {
+                margin-bottom: 22px;
             }
 
-            .modal-content {
-                padding: 20px 16px;
+            .email-2col {
+                grid-template-columns: 1fr;
             }
 
             .email-form {
@@ -1057,6 +1093,7 @@
             .icon-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
+                margin-bottom: 24px;
             }
 
             .platform-grid .social-icon {
@@ -1119,6 +1156,15 @@
             .back-img-label {
                 font-size: 9px;
                 padding: 7px 0;
+            }
+
+            .section-title {
+                font-size: 9.5px;
+                margin-bottom: 14px;
+            }
+
+            .section-divider {
+                margin-bottom: 18px;
             }
         }
 
@@ -1261,6 +1307,7 @@
                 <button class="modal-close" id="btnCloseModal">&times;</button>
             </div>
             <div class="modal-content">
+
                 <div class="section-title">Media Sosial & Komunikasi</div>
                 <div class="icon-grid">
                     <a href="https://wa.me/6282254512722" target="_blank" class="social-icon"><img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WA"><span>WhatsApp</span></a>
@@ -1281,6 +1328,8 @@
                     <a href="#" class="social-icon"><img src="BEREAL.png" alt="BR"><span>BeReal</span></a>
                 </div>
 
+                <div class="section-divider"></div>
+
                 <div class="section-title">Platform Bisnis & Website Internal</div>
                 <div class="icon-grid platform-grid">
                     <a href="#" class="social-icon"><img src="Untitled_design-removebg-preview.png" alt="GEINA"><span>GEINIA NASIONAL</span></a>
@@ -1294,9 +1343,13 @@
                     <a href="#" class="social-icon"><img src="XEAGIS_INDUSTRI.png" alt="XEAGIS"><span>XEAGIS INDUSTRI</span></a>
                     <a href="#" class="social-icon"><img src="DANABATRI.png" alt="DANABATRI"><span>DANABATRI</span></a>
                     <a href="#" class="social-icon"><img src="PORINVEX.png" alt="PORINVEX"><span>PORINVEX</span></a>
-                    <!-- TAMBAHAN: KOTAK PADAT -->
                     <a href="#" class="social-icon"><img src="PADAT.png" alt="PADAT"><span>PADAT</span></a>
+                    <a href="#" class="social-icon"><img src="BEARBALCK_SECURITY.png" alt="BEARBALCK"><span>BEARBALCK SECURITY</span></a>
+                    <a href="#" class="social-icon"><img src="AXITORIUM_LAB.png" alt="AXITORIUM"><span>AXITORIUM LAB</span></a>
+                    <a href="#" class="social-icon"><img src="WEILMY.png" alt="WEILMY"><span>WEILMY</span></a>
+                    <a href="#" class="social-icon"><img src="SIRAVEX.png" alt="SIRAVEX"><span>SIRAVEX</span></a>
                 </div>
+
             </div>
         </div>
     </div>
@@ -1492,7 +1545,6 @@
             snapTo(0, function() { toast('Kartu direset'); });
         }
 
-        // Drag handlers untuk mode 360
         function onPointerDown(e) {
             if (mode !== '360' || locked()) return;
             isDragging = true;
@@ -1524,7 +1576,6 @@
         document.addEventListener('touchmove', onPointerMove, { passive: false });
         document.addEventListener('touchend', onPointerUp);
 
-        // Side panel buttons
         document.getElementById('spFlip').addEventListener('click', doFlip);
         document.getElementById('spFront').addEventListener('click', goFront);
         document.getElementById('spBack').addEventListener('click', goBack);
@@ -1532,7 +1583,6 @@
         document.getElementById('spAuto').addEventListener('click', toggleAuto);
         document.getElementById('spReset').addEventListener('click', doReset);
 
-        // Modal tautan
         document.getElementById('btnOpenModal').addEventListener('click', function() {
             modalEl.classList.add('active');
             isModalOpen = true;
@@ -1553,7 +1603,6 @@
             }
         });
 
-        // Modal email
         document.getElementById('btnOpenEmail').addEventListener('click', function() {
             modalEmailEl.classList.add('active');
             isEmailOpen = true;
@@ -1574,7 +1623,6 @@
             }
         });
 
-        // Kirim langsung via EmailJS (simulasi)
         document.getElementById('emailForm').addEventListener('submit', function(e) {
             e.preventDefault();
             var btn = document.getElementById('btnKirim');
@@ -1584,7 +1632,6 @@
             emsg.className = 'emsg';
             emsg.style.display = 'none';
 
-            // Simulasi pengiriman
             setTimeout(function() {
                 btn.disabled = false;
                 btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Langsung';
@@ -1596,7 +1643,6 @@
             }, 2000);
         });
 
-        // Kirim via Gmail
         document.getElementById('btnGmail').addEventListener('click', function() {
             var nama = document.getElementById('eNama').value || '';
             var email = document.getElementById('eEmail').value || '';
@@ -1607,7 +1653,6 @@
             window.open(mailto, '_blank');
         });
 
-        // Hologram mouse tracking
         var cardPerspective = document.getElementById('cardPerspective');
         cardPerspective.addEventListener('mousemove', function(e) {
             var rect = cardPerspective.getBoundingClientRect();
@@ -1621,7 +1666,6 @@
             holoBack.style.setProperty('--holo-y', y + '%');
         });
 
-        // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
             if (isModalOpen || isEmailOpen) {
                 if (e.key === 'Escape') {
@@ -1642,7 +1686,6 @@
             if (e.key === 'a' || e.key === 'A') toggleAuto();
         });
 
-        // Init
         updateButtons();
     </script>
 </body>
