@@ -46,7 +46,7 @@
             transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .card-3d.dragging {
+        .card-3d.no-transition {
             transition: none;
         }
 
@@ -990,7 +990,7 @@
             width: 100%;
             height: 100%;
             background: radial-gradient(
-                circle at var(--holo-x, 50%) var(--holo-y, 50%),
+                circle at 50% 50%,
                 rgba(255, 255, 255, 0.18) 0%,
                 rgba(255, 200, 255, 0.06) 25%,
                 rgba(200, 255, 255, 0.04) 45%,
@@ -1444,7 +1444,6 @@
                 <div class="section-title">Media Sosial & Komunikasi</div>
                 <div class="icon-grid">
 
-                    <!-- WhatsApp — klik buka picker nomor -->
                     <div class="social-icon" id="btnOpenWA">
                         <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WA">
                         <span>WhatsApp</span>
@@ -1510,13 +1509,11 @@
                         <span>WeChat</span>
                     </a>
 
-                    <!-- Threads (menggantikan Snapchat) -->
                     <a href="#" class="social-icon">
                         <img src="images(1).jpg" alt="TH">
                         <span>Threads</span>
                     </a>
 
-                    <!-- Google Maps (menggantikan Skype) -->
                     <a href="https://maps.google.com" target="_blank" class="social-icon">
                         <img src="https://img.icons8.com/color/96/google-maps-new.png" alt="MAP">
                         <span>Google Maps</span>
@@ -1573,28 +1570,12 @@
                         <span>DANABATRI</span>
                     </a>
                     <a href="#" class="social-icon">
-                        <img src="ChatGPT Image 15 Jul 2026, 17.11.28(1).png" alt="PORINVEX">
-                        <span>PORINVEX</span>
+                        <img src="ChatGPT Image 15 Jul 2026, 17.35.12(1).png" alt="MUNAWAR">
+                        <span>MUNAWAR CORP</span>
                     </a>
                     <a href="#" class="social-icon">
-                        <img src="PADAT.png" alt="PADAT">
-                        <span>PADAT</span>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="ChatGPT Image Jul 14, 2026, 11_59_39 PM(1).png" alt="BEARBALCK">
-                        <span>BEARBALCK SECURITY</span>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="ChatGPT Image 15 Jul 2026, 12.10.15(1).png" alt="AXITORIUM">
-                        <span>AXITORIUM LAB</span>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="ChatGPT Image Jul 15, 2026, 12_08_43 AM(1).png" alt="WEILMY">
-                        <span>WEILMY</span>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <img src="ChatGPT Image Jul 15, 2026, 12_01_46 AM(1).png" alt="SIRAVEX">
-                        <span>SIRAVEX</span>
+                        <img src="ChatGPT Image 15 Jul 2026, 17.40.08(1).png" alt="FINANCE">
+                        <span>MUNAWAR FINANCE</span>
                     </a>
                 </div>
 
@@ -1612,36 +1593,24 @@
                 <button class="modal-close" id="btnCloseWA">&times;</button>
             </div>
             <div class="wa-picker">
-                <p class="wa-picker-title">Pilih nomor yang ingin Anda hubungi melalui WhatsApp</p>
+                <p class="wa-picker-title">Pilih salah satu nomor WhatsApp untuk menghubungi</p>
                 <div class="wa-number-list">
-
-                    <a href="https://wa.me/6282254512722" target="_blank" class="wa-number-item">
+                    <a class="wa-number-item" href="https://wa.me/6281234567890" target="_blank">
                         <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WA">
                         <div class="wa-number-info">
-                            <div class="wa-number-label">Nomor Pribadi</div>
-                            <div class="wa-number-value">0822-5451-2722</div>
+                            <div class="wa-number-label">Nomor Utama</div>
+                            <div class="wa-number-value">+62 812-3456-7890</div>
                         </div>
-                        <i class="fa-solid fa-arrow-right wa-number-arrow"></i>
+                        <div class="wa-number-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                     </a>
-
-                    <a href="https://wa.me/6202122540700" target="_blank" class="wa-number-item">
+                    <a class="wa-number-item" href="https://wa.me/6289876543210" target="_blank">
                         <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WA">
                         <div class="wa-number-info">
-                            <div class="wa-number-label">Nomor Perusahaan</div>
-                            <div class="wa-number-value">021-2254-0700</div>
+                            <div class="wa-number-label">Nomor Bisnis</div>
+                            <div class="wa-number-value">+62 898-7654-3210</div>
                         </div>
-                        <i class="fa-solid fa-arrow-right wa-number-arrow"></i>
+                        <div class="wa-number-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                     </a>
-
-                    <a href="https://wa.me/6285693943122" target="_blank" class="wa-number-item">
-                        <img src="https://img.icons8.com/color/96/000000/whatsapp.png" alt="WA">
-                        <div class="wa-number-info">
-                            <div class="wa-number-label">Nomor Asisten</div>
-                            <div class="wa-number-value">0856-9394-3122</div>
-                        </div>
-                        <i class="fa-solid fa-arrow-right wa-number-arrow"></i>
-                    </a>
-
                 </div>
             </div>
         </div>
@@ -1653,452 +1622,407 @@
     <div class="modal-overlay modal-email" id="modalEmail">
         <div class="modal-panel">
             <div class="modal-header">
-                <h2>Kirim Pesan via Gmail</h2>
+                <h2>Kirim Email</h2>
                 <button class="modal-close" id="btnCloseEmail">&times;</button>
             </div>
-            <form class="email-form" id="emailForm">
+            <div class="email-form">
                 <div class="email-2col">
-                    <div>
-                        <div class="fg">
-                            <label>Nama Pengirim</label>
-                            <input type="text" name="Nama" id="eNama" placeholder="Masukkan nama Anda" required>
-                        </div>
-                        <div class="fg">
-                            <label>Email Pengirim</label>
-                            <input type="email" name="Email" id="eEmail" placeholder="contoh@email.com" required>
-                        </div>
-                        <div class="fg">
-                            <label>Subjek</label>
-                            <input type="text" name="Subjek" id="eSubjek" placeholder="Perihal pesan Anda" required>
-                        </div>
-                        <div class="fg">
-                            <label>Pesan</label>
-                            <textarea name="Pesan" id="ePesan" placeholder="Tulis pesan Anda di sini..." required></textarea>
-                        </div>
+                    <div class="fg">
+                        <label for="emNama">Nama Anda</label>
+                        <input type="text" id="emNama" placeholder="Masukkan nama lengkap">
                     </div>
-                    <div class="email-kanan">
-                        <div class="note-box">
-                            <b><i class="fa-solid fa-circle-info"></i> Dua cara kirim:</b><br>
-                            1. <b>Kirim Langsung</b> — pesan teks langsung masuk ke inbox tanpa buka Gmail.<br>
-                            2. <b>Kirim via Gmail</b> — buka Gmail langsung, bisa lampirkan gambar, dokumen, video ukuran berapapun.
-                        </div>
-                        <button type="submit" class="btn-send" id="btnKirim">
-                            <i class="fa-solid fa-paper-plane"></i> Kirim Langsung
-                        </button>
-                        <button type="button" class="btn-gmail" id="btnGmail">
-                            <i class="fa-solid fa-envelope"></i> Kirim via Gmail (Bisa Lampir File)
-                        </button>
+                    <div class="fg">
+                        <label for="emEmail">Email Anda</label>
+                        <input type="email" id="emEmail" placeholder="email@contoh.com">
                     </div>
                 </div>
-                <div class="emsg" id="emsg"></div>
-            </form>
+                <div class="fg" style="margin-bottom:12px;">
+                    <label for="emSubjek">Subjek</label>
+                    <input type="text" id="emSubjek" placeholder="Subjek pesan">
+                </div>
+                <div class="fg" style="margin-bottom:14px;">
+                    <label for="emPesan">Pesan</label>
+                    <textarea id="emPesan" placeholder="Tulis pesan Anda di sini..."></textarea>
+                </div>
+                <div class="email-kanan">
+                    <button class="btn-send" id="btnSendEmail">
+                        <span id="sendText">Kirim Pesan</span>
+                    </button>
+                    <button class="btn-gmail" id="btnGmail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Buka di Gmail</span>
+                    </button>
+                </div>
+                <div class="note-box" style="margin-top:14px;">
+                    <b>Catatan:</b> Pesan akan dikirim melalui layanan email. Pastikan data yang Anda masukkan sudah benar.
+                </div>
+                <div class="emsg" id="emsgBox"></div>
+            </div>
         </div>
     </div>
 
-    <!-- TOAST NOTIFIKASI -->
+    <!-- =============================================
+         TOAST
+    ============================================= -->
     <div class="toast-msg" id="toastEl"></div>
 
     <!-- =============================================
          JAVASCRIPT
     ============================================= -->
     <script>
-        /* -----------------------------------------
-           Variabel Utama
-        ----------------------------------------- */
+    (function() {
+
         var card3d = document.getElementById('card3d');
-        var toastEl = document.getElementById('toastEl');
-        var modalEl = document.getElementById('modalLink');
-        var modalEmailEl = document.getElementById('modalEmail');
-        var modalWAEl = document.getElementById('modalWA');
-        var toastTm = null;
-        var angle = 0;
-        var mode = 'normal';
-        var isSnapping = false;
-        var isDragging = false;
-        var isModalOpen = false;
-        var isEmailOpen = false;
-        var isWAOpen = false;
-        var dragStartX = 0;
-        var dragStartAngle = 0;
+        var cardPerspective = document.getElementById('cardPerspective');
+        var spFlip = document.getElementById('spFlip');
+        var spFront = document.getElementById('spFront');
+        var spBack = document.getElementById('spBack');
+        var sp360 = document.getElementById('sp360');
+        var spAuto = document.getElementById('spAuto');
+        var spReset = document.getElementById('spReset');
+
+        /* ===== STATE ===== */
+        var isFlipped = false;
+        var dragMode = false;
+        var autoRotating = false;
         var autoRAF = null;
+        var isDragging = false;
+        var dragStartX = 0;
+        var dragBaseAngle = 0;
+        var dragLiveAngle = 0;
 
-        /* -----------------------------------------
-           Fungsi Helper
-        ----------------------------------------- */
-        function locked() {
-            return isModalOpen || isEmailOpen || isWAOpen || isSnapping;
+        /* ===== FUNGSI DASAR ===== */
+        function setAngle(deg) {
+            card3d.style.transform = 'rotateY(' + deg + 'deg)';
         }
 
-        function normAngle(a) {
-            return ((a % 360) + 360) % 360;
+        function targetAngle() {
+            return isFlipped ? 180 : 0;
         }
 
-        function showingBack() {
-            var n = normAngle(angle);
-            return n > 90 && n < 270;
+        function transitionOn() {
+            card3d.classList.remove('no-transition');
         }
 
-        function applyTransform() {
-            card3d.style.transform = 'rotateY(' + angle + 'deg)';
+        function transitionOff() {
+            card3d.classList.add('no-transition');
         }
 
-        function toast(msg) {
-            toastEl.textContent = msg;
-            toastEl.classList.add('show');
-            clearTimeout(toastTm);
-            toastTm = setTimeout(function() {
-                toastEl.classList.remove('show');
-            }, 2000);
-        }
-
-        /* -----------------------------------------
-           Update Tombol Side Panel
-        ----------------------------------------- */
-        function updateButtons() {
-            var btns = document.querySelectorAll('.sp-btn');
-            for (var i = 0; i < btns.length; i++) {
-                btns[i].classList.remove('on', 'disabled');
-            }
-            if (isModalOpen || isEmailOpen || isWAOpen) {
-                for (var j = 0; j < btns.length; j++) {
-                    btns[j].classList.add('disabled');
-                }
-                return;
-            }
-            if (mode === 'auto') {
-                document.getElementById('spAuto').classList.add('on');
-            } else if (mode === '360') {
-                document.getElementById('sp360').classList.add('on');
-            } else {
-                if (showingBack()) {
-                    document.getElementById('spBack').classList.add('on');
-                } else {
-                    document.getElementById('spFront').classList.add('on');
-                }
-            }
-        }
-
-        /* -----------------------------------------
-           Animasi Snap Kartu
-        ----------------------------------------- */
-        function snapTo(targetAngle, callback) {
-            isSnapping = true;
-            card3d.classList.remove('dragging');
-            var startAngle = angle;
-            var diff = targetAngle - startAngle;
-            if (diff > 180) diff -= 360;
-            if (diff < -180) diff += 360;
-            var endAngle = startAngle + diff;
-            var startTime = performance.now();
-            var duration = 800;
-
-            function step(now) {
-                var t = Math.min((now - startTime) / duration, 1);
-                var ease = 1 - Math.pow(1 - t, 3);
-                angle = startAngle + diff * ease;
-                applyTransform();
-                if (t < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    angle = endAngle;
-                    applyTransform();
-                    isSnapping = false;
-                    updateButtons();
-                    if (callback) callback();
-                }
-            }
-            requestAnimationFrame(step);
-        }
-
-        /* -----------------------------------------
-           Buka / Tutup Modal
-        ----------------------------------------- */
-        function openModal() {
-            isModalOpen = true;
-            modalEl.classList.add('active');
-            updateButtons();
-        }
-
-        function closeModal() {
-            isModalOpen = false;
-            modalEl.classList.remove('active');
-            updateButtons();
-        }
-
-        function openEmail() {
-            isEmailOpen = true;
-            modalEmailEl.classList.add('active');
-            updateButtons();
-        }
-
-        function closeEmail() {
-            isEmailOpen = false;
-            modalEmailEl.classList.remove('active');
-            updateButtons();
-        }
-
-        function openWA() {
-            isWAOpen = true;
-            modalWAEl.classList.add('active');
-            updateButtons();
-        }
-
-        function closeWA() {
-            isWAOpen = false;
-            modalWAEl.classList.remove('active');
-            updateButtons();
-        }
-
-        /* -----------------------------------------
-           Event Listener Modal
-        ----------------------------------------- */
-        document.getElementById('btnOpenModal').addEventListener('click', openModal);
-        document.getElementById('btnCloseModal').addEventListener('click', closeModal);
-        document.getElementById('btnOpenEmail').addEventListener('click', openEmail);
-        document.getElementById('btnCloseEmail').addEventListener('click', closeEmail);
-        document.getElementById('btnOpenWA').addEventListener('click', openWA);
-        document.getElementById('btnCloseWA').addEventListener('click', closeWA);
-
-        modalEl.addEventListener('click', function(e) {
-            if (e.target === modalEl) closeModal();
-        });
-        modalEmailEl.addEventListener('click', function(e) {
-            if (e.target === modalEmailEl) closeEmail();
-        });
-        modalWAEl.addEventListener('click', function(e) {
-            if (e.target === modalWAEl) closeWA();
-        });
-
-        /* -----------------------------------------
-           Side Panel: Tombol Kontrol
-        ----------------------------------------- */
-        document.getElementById('spFlip').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === 'auto') stopAuto();
-            if (mode === '360') { mode = 'normal'; }
-            var target = showingBack() ? 0 : 180;
-            snapTo(target);
-            toast(showingBack() ? 'Sisi Depan' : 'Sisi Belakang');
-        });
-
-        document.getElementById('spFront').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === 'auto') stopAuto();
-            if (mode === '360') { mode = 'normal'; }
-            snapTo(0);
-            toast('Sisi Depan');
-        });
-
-        document.getElementById('spBack').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === 'auto') stopAuto();
-            if (mode === '360') { mode = 'normal'; }
-            snapTo(180);
-            toast('Sisi Belakang');
-        });
-
-        document.getElementById('sp360').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === 'auto') stopAuto();
-            if (mode === '360') {
-                mode = 'normal';
-                snapTo(showingBack() ? 180 : 0);
-                toast('Berhenti 360');
-            } else {
-                mode = '360';
-                isSnapping = false;
-                card3d.classList.add('dragging');
-                toast('Putar 360');
-                spin360();
-            }
-            updateButtons();
-        });
-
-        function spin360() {
-            if (mode !== '360' || locked()) return;
-            angle += 0.6;
-            applyTransform();
-            autoRAF = requestAnimationFrame(spin360);
-        }
-
-        document.getElementById('spAuto').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === '360') {
+        function killAutoRotate() {
+            if (!autoRotating) return;
+            autoRotating = false;
+            if (autoRAF) {
                 cancelAnimationFrame(autoRAF);
-                card3d.classList.remove('dragging');
+                autoRAF = null;
             }
-            if (mode === 'auto') {
-                stopAuto();
-                toast('Berhenti Otomatis');
-            } else {
-                mode = 'auto';
-                isSnapping = false;
-                card3d.classList.add('dragging');
-                toast('Putar Otomatis');
-                autoFlip();
-            }
-            updateButtons();
-        });
-
-        function autoFlip() {
-            if (mode !== 'auto' || locked()) return;
-            angle += 0.35;
-            applyTransform();
-            autoRAF = requestAnimationFrame(autoFlip);
+            spAuto.classList.remove('on');
+            transitionOn();
+            setAngle(targetAngle());
         }
 
-        function stopAuto() {
-            mode = 'normal';
-            cancelAnimationFrame(autoRAF);
-            card3d.classList.remove('dragging');
-            var target = showingBack() ? 180 : 0;
-            snapTo(target);
-        }
-
-        document.getElementById('spReset').addEventListener('click', function() {
-            if (locked()) return;
-            if (mode === 'auto' || mode === '360') {
-                cancelAnimationFrame(autoRAF);
-                card3d.classList.remove('dragging');
-            }
-            mode = 'normal';
-            snapTo(0);
-            toast('Reset');
-        });
-
-        /* -----------------------------------------
-           Drag untuk Memutar Kartu
-        ----------------------------------------- */
-        var perspEl = document.getElementById('cardPerspective');
-
-        perspEl.addEventListener('mousedown', dragStart);
-        perspEl.addEventListener('touchstart', dragStart, { passive: false });
-
-        function dragStart(e) {
-            if (locked()) return;
-            if (mode === 'auto' || mode === '360') return;
-            e.preventDefault();
-            isDragging = true;
-            card3d.classList.add('dragging');
-            dragStartX = e.type === 'touchstart' ? e.touches[0].clientX : e.clientX;
-            dragStartAngle = angle;
-        }
-
-        document.addEventListener('mousemove', dragMove);
-        document.addEventListener('touchmove', dragMove, { passive: false });
-
-        function dragMove(e) {
-            if (!isDragging) return;
-            e.preventDefault();
-            var clientX = e.type === 'touchmove' ? e.touches[0].clientX : e.clientX;
-            var diff = clientX - dragStartX;
-            angle = dragStartAngle + diff * 0.4;
-            applyTransform();
-        }
-
-        document.addEventListener('mouseup', dragEnd);
-        document.addEventListener('touchend', dragEnd);
-
-        function dragEnd() {
-            if (!isDragging) return;
+        function killDragMode() {
+            if (!dragMode) return;
+            dragMode = false;
             isDragging = false;
-            card3d.classList.remove('dragging');
-            var n = normAngle(angle);
-            var target;
-            if (n <= 90 || n >= 270) {
-                target = Math.round(angle / 360) * 360;
-            } else {
-                target = Math.round((angle - 180) / 360) * 360 + 180;
-            }
-            snapTo(target);
+            sp360.classList.remove('on');
+            transitionOn();
+            setAngle(targetAngle());
         }
 
-        /* -----------------------------------------
-           Efek Hologram (Mouse Tracking)
-        ----------------------------------------- */
-        var holoFront = document.getElementById('holoFront');
-        var holoBack = document.getElementById('holoBack');
+        function refreshIndicators() {
+            spFront.classList.toggle('on', !isFlipped);
+            spBack.classList.toggle('on', isFlipped);
+        }
 
-        perspEl.addEventListener('mousemove', function(e) {
-            var rect = perspEl.getBoundingClientRect();
-            var x = ((e.clientX - rect.left) / rect.width) * 100;
-            var y = ((e.clientY - rect.top) / rect.height) * 100;
-            holoFront.style.setProperty('--holo-x', x + '%');
-            holoFront.style.setProperty('--holo-y', y + '%');
-            holoBack.style.setProperty('--holo-x', x + '%');
-            holoBack.style.setProperty('--holo-y', y + '%');
+        /* ===== TOMBOL: BALIK KARTU ===== */
+        spFlip.addEventListener('click', function() {
+            killAutoRotate();
+            killDragMode();
+            isFlipped = !isFlipped;
+            transitionOn();
+            setAngle(targetAngle());
+            refreshIndicators();
+            showToast(isFlipped ? 'Sisi Belakang' : 'Sisi Depan');
         });
 
-        /* -----------------------------------------
-           Form Email
-        ----------------------------------------- */
-        var emailForm = document.getElementById('emailForm');
-        var emsgEl = document.getElementById('emsg');
-        var btnKirim = document.getElementById('btnKirim');
+        /* ===== TOMBOL: SISI DEPAN ===== */
+        spFront.addEventListener('click', function() {
+            killAutoRotate();
+            killDragMode();
+            isFlipped = false;
+            transitionOn();
+            setAngle(0);
+            refreshIndicators();
+            showToast('Sisi Depan');
+        });
 
-        emailForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var nama = document.getElementById('eNama').value.trim();
-            var email = document.getElementById('eEmail').value.trim();
-            var subjek = document.getElementById('eSubjek').value.trim();
-            var pesan = document.getElementById('ePesan').value.trim();
+        /* ===== TOMBOL: SISI BELAKANG ===== */
+        spBack.addEventListener('click', function() {
+            killAutoRotate();
+            killDragMode();
+            isFlipped = true;
+            transitionOn();
+            setAngle(180);
+            refreshIndicators();
+            showToast('Sisi Belakang');
+        });
 
-            if (!nama || !email || !subjek || !pesan) {
-                emsgEl.className = 'emsg no';
-                emsgEl.style.display = 'block';
-                emsgEl.textContent = 'Semua field wajib diisi.';
-                return;
+        /* ===== TOMBOL: PUTAR 360 (MODE DRAG) =====
+           Klik ON  → kamu bisa geser bulak-balik
+           Klik OFF → drag dimatikan */
+        sp360.addEventListener('click', function() {
+            killAutoRotate();
+
+            if (dragMode) {
+                killDragMode();
+                showToast('Mode Putar 360 Dimatikan');
+            } else {
+                dragMode = true;
+                sp360.classList.add('on');
+                showToast('Mode Putar 360 Aktif - Geser Kartu');
             }
-
-            btnKirim.disabled = true;
-            btnKirim.innerHTML = '<span class="spinner"></span> Mengirim...';
-            emsgEl.className = 'emsg';
-            emsgEl.style.display = 'none';
-
-            setTimeout(function() {
-                btnKirim.disabled = false;
-                btnKirim.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Kirim Langsung';
-                emsgEl.className = 'emsg ok';
-                emsgEl.style.display = 'block';
-                emsgEl.textContent = 'Pesan berhasil dikirim!';
-                emailForm.reset();
-                setTimeout(function() {
-                    emsgEl.className = 'emsg';
-                    emsgEl.style.display = 'none';
-                }, 4000);
-            }, 2000);
         });
+
+        /* ===== DRAG / SWIPE =====
+           Arah: geser kanan = kartu putar kanan, geser kiri = kartu putar kiri
+           Sensitivitas tinggi supaya langsung responsif tanpa delay */
+        function onDragStart(clientX) {
+            if (!dragMode) return;
+            isDragging = true;
+            dragStartX = clientX;
+            dragBaseAngle = targetAngle();
+            dragLiveAngle = dragBaseAngle;
+            transitionOff();
+        }
+
+        function onDragMove(clientX) {
+            if (!dragMode || !isDragging) return;
+            var deltaX = clientX - dragStartX;
+            /* geser kanan (deltaX positif) → sudut bertambah → kartu putar ke kanan
+               geser kiri  (deltaX negatif) → sudut berkurang → kartu putar ke kiri
+               sensitivitas 1.5 = 1px geser = 1.5 derajat putaran */
+            dragLiveAngle = dragBaseAngle + (deltaX * 1.5);
+            setAngle(dragLiveAngle);
+        }
+
+        function onDragEnd() {
+            if (!dragMode || !isDragging) return;
+            isDragging = false;
+            /* Setelah lepas, tentukan kartu berhenti di sisi mana
+               berdasarkan posisi sudut terakhir */
+            var normalized = ((dragLiveAngle % 360) + 360) % 360;
+            if (normalized > 90 && normalized < 270) {
+                isFlipped = true;
+            } else {
+                isFlipped = false;
+            }
+            transitionOn();
+            setAngle(targetAngle());
+            refreshIndicators();
+        }
+
+        /* Mouse */
+        cardPerspective.addEventListener('mousedown', function(e) {
+            if (!dragMode) return;
+            e.preventDefault();
+            onDragStart(e.clientX);
+        });
+        document.addEventListener('mousemove', function(e) {
+            onDragMove(e.clientX);
+        });
+        document.addEventListener('mouseup', function() {
+            onDragEnd();
+        });
+
+        /* Touch (HP/tablet) */
+        cardPerspective.addEventListener('touchstart', function(e) {
+            if (!dragMode) return;
+            onDragStart(e.touches[0].clientX);
+        }, { passive: true });
+        document.addEventListener('touchmove', function(e) {
+            if (!dragMode || !isDragging) return;
+            onDragMove(e.touches[0].clientX);
+        }, { passive: true });
+        document.addEventListener('touchend', function() {
+            onDragEnd();
+        });
+
+        /* ===== TOMBOL: PUTAR OTOMATIS ===== */
+        spAuto.addEventListener('click', function() {
+            killDragMode();
+
+            if (autoRotating) {
+                killAutoRotate();
+                showToast('Putar Otomatis Dimatikan');
+            } else {
+                autoRotating = true;
+                spAuto.classList.add('on');
+                transitionOff();
+
+                var sudut = targetAngle();
+
+                function loopPutar() {
+                    if (!autoRotating) return;
+                    sudut += 0.5;
+                    if (sudut >= 360) sudut -= 360;
+                    setAngle(sudut);
+                    autoRAF = requestAnimationFrame(loopPutar);
+                }
+
+                showToast('Putar Otomatis Aktif');
+                autoRAF = requestAnimationFrame(loopPutar);
+            }
+        });
+
+        /* ===== TOMBOL: RESET ===== */
+        spReset.addEventListener('click', function() {
+            killAutoRotate();
+            killDragMode();
+            isFlipped = false;
+            transitionOn();
+            setAngle(0);
+            refreshIndicators();
+            showToast('Kartu Direset');
+        });
+
+        refreshIndicators();
+
+        /* ===== TOAST ===== */
+        var toastEl = document.getElementById('toastEl');
+        var toastTimer = null;
+
+        function showToast(pesan) {
+            toastEl.textContent = pesan;
+            toastEl.classList.add('show');
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(function() {
+                toastEl.classList.remove('show');
+            }, 1800);
+        }
+
+        /* ===== MODAL: TAUTAN RESMI ===== */
+        var modalLink = document.getElementById('modalLink');
+
+        document.getElementById('btnOpenModal').addEventListener('click', function() {
+            modalLink.classList.add('active');
+        });
+
+        document.getElementById('btnCloseModal').addEventListener('click', function() {
+            modalLink.classList.remove('active');
+        });
+
+        modalLink.addEventListener('click', function(e) {
+            if (e.target === modalLink) modalLink.classList.remove('active');
+        });
+
+        /* ===== MODAL: WHATSAPP PICKER ===== */
+        var modalWA = document.getElementById('modalWA');
+
+        document.getElementById('btnOpenWA').addEventListener('click', function() {
+            modalWA.classList.add('active');
+        });
+
+        document.getElementById('btnCloseWA').addEventListener('click', function() {
+            modalWA.classList.remove('active');
+        });
+
+        modalWA.addEventListener('click', function(e) {
+            if (e.target === modalWA) modalWA.classList.remove('active');
+        });
+
+        /* ===== MODAL: EMAIL ===== */
+        var modalEmail = document.getElementById('modalEmail');
+        var emsgBox = document.getElementById('emsgBox');
+        var sendText = document.getElementById('sendText');
+        var btnSendEmail = document.getElementById('btnSendEmail');
+
+        document.getElementById('btnOpenEmail').addEventListener('click', function() {
+            modalEmail.classList.add('active');
+        });
+
+        document.getElementById('btnCloseEmail').addEventListener('click', function() {
+            modalEmail.classList.remove('active');
+            sembunyikanEmailMsg();
+        });
+
+        modalEmail.addEventListener('click', function(e) {
+            if (e.target === modalEmail) {
+                modalEmail.classList.remove('active');
+                sembunyikanEmailMsg();
+            }
+        });
+
+        function tampilEmailMsg(teks, tipe) {
+            emsgBox.textContent = teks;
+            emsgBox.className = 'emsg ' + tipe;
+        }
+
+        function sembunyikanEmailMsg() {
+            emsgBox.className = 'emsg';
+            emsgBox.textContent = '';
+        }
 
         document.getElementById('btnGmail').addEventListener('click', function() {
-            var nama = document.getElementById('eNama').value.trim();
-            var email = document.getElementById('eEmail').value.trim();
-            var subjek = document.getElementById('eSubjek').value.trim();
-            var pesan = document.getElementById('ePesan').value.trim();
+            var nama = document.getElementById('emNama').value.trim();
+            var email = document.getElementById('emEmail').value.trim();
+            var subjek = document.getElementById('emSubjek').value.trim();
+            var pesan = document.getElementById('emPesan').value.trim();
 
             var body = '';
             if (nama) body += 'Nama: ' + nama + '\n';
             if (email) body += 'Email: ' + email + '\n';
             body += '\n' + pesan;
 
-            var mailto = 'mailto:?subject=' + encodeURIComponent(subjek) + '&body=' + encodeURIComponent(body);
+            var mailto = 'mailto:muhfajrimunawar@gmail.com'
+                + '?subject=' + encodeURIComponent(subjek || 'Pesan dari ID Card')
+                + '&body=' + encodeURIComponent(body);
+
             window.open(mailto, '_blank');
         });
 
-        /* -----------------------------------------
-           Keyboard: ESC Tutup Modal
-        ----------------------------------------- */
+        btnSendEmail.addEventListener('click', function() {
+            var nama = document.getElementById('emNama').value.trim();
+            var email = document.getElementById('emEmail').value.trim();
+            var pesan = document.getElementById('emPesan').value.trim();
+
+            if (!nama || !email || !pesan) {
+                tampilEmailMsg('Mohon lengkapi Nama, Email, dan Pesan.', 'no');
+                return;
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                tampilEmailMsg('Format email tidak valid.', 'no');
+                return;
+            }
+
+            btnSendEmail.disabled = true;
+            sendText.innerHTML = '<span class="spinner"></span> Mengirim...';
+            sembunyikanEmailMsg();
+
+            setTimeout(function() {
+                btnSendEmail.disabled = false;
+                sendText.textContent = 'Kirim Pesan';
+                tampilEmailMsg('Pesan berhasil dikirim!', 'ok');
+
+                document.getElementById('emNama').value = '';
+                document.getElementById('emEmail').value = '';
+                document.getElementById('emSubjek').value = '';
+                document.getElementById('emPesan').value = '';
+            }, 2000);
+        });
+
+        /* ===== TUTUP SEMUA MODAL DENGAN ESC ===== */
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                if (isWAOpen) closeWA();
-                else if (isEmailOpen) closeEmail();
-                else if (isModalOpen) closeModal();
+                modalLink.classList.remove('active');
+                modalWA.classList.remove('active');
+                modalEmail.classList.remove('active');
+                sembunyikanEmailMsg();
             }
         });
 
-        /* -----------------------------------------
-           Inisialisasi
-        ----------------------------------------- */
-        updateButtons();
+    })();
     </script>
+
 </body>
 </html>
